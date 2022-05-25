@@ -84,4 +84,4 @@ Provides the function `ForEachObject` and the related `TFunction` instance type 
     //
     //    ForEachObject([&](UObject* Object) {
     //         Print(Object->GetName());
-    //    } // prints the name of every UObject instance in the program.
+    //    }); // prints the name of every UObject instance in the program.
