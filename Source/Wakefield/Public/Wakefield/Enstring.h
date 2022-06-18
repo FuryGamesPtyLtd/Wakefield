@@ -11,7 +11,7 @@
 //    Enstring("a", "bc", 3) returns FString("abc3")
 //
 inline FString Enstring() { return {}; }
-inline FString Enstring(FString Str) { return std::move(Str); }
+inline FString Enstring(FString Str) { return Str; }
 inline FString Enstring(const ANSICHAR* Str) { return FString(Str); }
 inline FString Enstring(const WIDECHAR* Str) { return FString(Str); }
 inline FString Enstring(const UTF8CHAR* Str) { return FString(Str); }
