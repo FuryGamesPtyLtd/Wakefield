@@ -9,16 +9,16 @@
 
 void ForEachObject(const FObjectVisitor& ObjectVisitor)
 {
-	FGCScopeGuard Guard;
-	for (FUObjectArray::TIterator Iterator(GUObjectArray); Iterator != FUObjectArray::TIterator(FUObjectArray::TIterator::EndTag, Iterator); ++Iterator)
-	{
-		FUObjectItem* ObjectItem = GUObjectArray.IndexToObject(Iterator.GetIndex());
-		check(ObjectItem);
-		UObjectBase* ObjectBase = ObjectItem->Object;
-		check(ObjectBase);
-		static_assert(sizeof(UObject) == sizeof(UObjectBase));
-		UObject* Object = static_cast<UObject*>(ObjectBase);
-		check(IsValid(Object));
-		ObjectVisitor(Object);
-	}
+    FGCScopeGuard Guard;
+    for (FUObjectArray::TIterator Iterator(GUObjectArray); Iterator != FUObjectArray::TIterator(FUObjectArray::TIterator::EndTag, Iterator); ++Iterator)
+    {
+        FUObjectItem* ObjectItem = GUObjectArray.IndexToObject(Iterator.GetIndex());
+        check(ObjectItem);
+        UObjectBase* ObjectBase = ObjectItem->Object;
+        check(ObjectBase);
+        static_assert(sizeof(UObject) == sizeof(UObjectBase));
+        UObject* Object = static_cast<UObject*>(ObjectBase);
+        check(IsValid(Object));
+        ObjectVisitor(Object);
+    }
 }

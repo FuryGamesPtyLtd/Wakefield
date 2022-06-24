@@ -8,5 +8,5 @@ DEFINE_LOG_CATEGORY(LogPrint);
 
 void PrintImpl(const FString& Message)
 {
-	UE_LOG(LogPrint, Display, TEXT("%s"), *Message);
+    UE_LOG(LogPrint, Display, TEXT("%s"), *Message);
 }

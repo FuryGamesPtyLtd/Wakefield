@@ -7,7 +7,7 @@
 UENUM()
 enum class EPalette : uint32
 {
-	Absolute_Zero = 0x0048BA UMETA(DisplayName = "Absolute Zero"),
+    Absolute_Zero = 0x0048BA UMETA(DisplayName = "Absolute Zero"),
     Acid_Green = 0xB0BF1A UMETA(DisplayName = "Acid Green"),
     Aero = 0x7CB9E8 UMETA(DisplayName = "Aero"),
     Aero_Blue = 0xC0E8D5 UMETA(DisplayName = "Aero Blue"),
@@ -905,10 +905,10 @@ enum class EPalette : uint32
 
 FORCEINLINE FLinearColor ToLinearColor(EPalette Palette)
 {
-	static_assert(sizeof(Palette) == sizeof(uint32));
-	uint32 Bytes = static_cast<uint32>(Palette);
-	return FLinearColor(FColor(
-		(Bytes >> 16) & 0xFF,
-		(Bytes >> 8) & 0xFF,
-		(Bytes >> 0) & 0xFF));
+    static_assert(sizeof(Palette) == sizeof(uint32));
+    uint32 Bytes = static_cast<uint32>(Palette);
+    return FLinearColor(FColor(
+        (Bytes >> 16) & 0xFF,
+        (Bytes >> 8) & 0xFF,
+        (Bytes >> 0) & 0xFF));
 }

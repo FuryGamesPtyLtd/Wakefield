@@ -33,7 +33,7 @@ template<typename T> FString Enstring(T&& t) { return std::forward<T>(t).ToStrin
 template<typename Arg0, typename... Args>
 FString Enstring(Arg0&& arg0, Args&& ... args)
 {
-	FString String = Enstring(std::forward<Arg0>(arg0));
-	(String += ... += Enstring(std::forward<Args>(args)));
-	return String;
+    FString String = Enstring(std::forward<Arg0>(arg0));
+    (String += ... += Enstring(std::forward<Args>(args)));
+    return String;
 }

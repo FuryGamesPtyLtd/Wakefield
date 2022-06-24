@@ -31,14 +31,14 @@ void WAKEFIELD_API PrintImpl(const FString& Message);
 template<typename Arg0>
 void Print(Arg0&& arg0)
 {
-	PrintImpl(Enstring(std::forward<Arg0>(arg0)));
+    PrintImpl(Enstring(std::forward<Arg0>(arg0)));
 }
 
 template<typename Arg0, typename... Args>
 void Print(Arg0&& arg0, Args&&... args)
 {
-	FString String = Enstring(std::forward<Arg0>(arg0));
-	
-	(((String += " ") += Enstring(std::forward<Args>(args))), ...);
-	PrintImpl(String);
+    FString String = Enstring(std::forward<Arg0>(arg0));
+    
+    (((String += " ") += Enstring(std::forward<Args>(args))), ...);
+    PrintImpl(String);
 }

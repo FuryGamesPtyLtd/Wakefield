@@ -6,12 +6,12 @@
 
 void FWakefieldModule::StartupModule()
 {
-	Print("Wakefield module starting up");
+    Print("Wakefield module starting up");
 }
 
 void FWakefieldModule::ShutdownModule()
 {
-	Print("TangoCore module shutting down");
+    Print("TangoCore module shutting down");
 }
 
 IMPLEMENT_MODULE(FWakefieldModule, Wakefield)
