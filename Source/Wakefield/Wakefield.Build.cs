@@ -8,6 +8,7 @@ public class Wakefield : ModuleRules
         bEnforceIWYU = true;
 		
 		PrivateDependencyModuleNames.AddRange(new string[]{
+			"Core",
 			"CoreUObject",
 			"Engine",
 			"Slate",
