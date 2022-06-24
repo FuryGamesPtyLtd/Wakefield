@@ -1,4 +1,4 @@
-// © 2022 Fury Games Pty Ltd.  All rights reserved.
+// Copyright Fury Games Pty Ltd. All Rights Reserved.
 
 #include "Wakefield/Print.h"
 

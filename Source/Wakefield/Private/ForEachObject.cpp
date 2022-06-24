@@ -1,3 +1,5 @@
+// Copyright Fury Games Pty Ltd. All Rights Reserved.
+
 #include "Wakefield/ForEachObject.h"
 
 #include "UObject/GarbageCollection.h"
