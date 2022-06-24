@@ -1,4 +1,4 @@
-﻿#include "Wakefield/ForEachObject.h"
+#include "Wakefield/ForEachObject.h"
 
 #include "UObject/GarbageCollection.h"
 #include "UObject/UObjectArray.h"

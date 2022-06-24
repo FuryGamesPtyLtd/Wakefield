@@ -1,2 +1,2 @@
-﻿#include "Wakefield/Palette.h"
+#include "Wakefield/Palette.h"
 

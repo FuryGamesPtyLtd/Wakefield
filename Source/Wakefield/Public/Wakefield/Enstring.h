@@ -1,4 +1,4 @@
-﻿// © 2022 Fury Games Pty Ltd.  All rights reserved.
+// © 2022 Fury Games Pty Ltd.  All rights reserved.
 
 #pragma once
 
