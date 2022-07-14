@@ -9,5 +9,5 @@
 using FObjectVisitor = TFunction<void(UObject* Object)>;
 
 // ForEachObject calls ObjectVisitor once for each UObject instance in the program, with the instance as parameter.
-// 
+//
 void WAKEFIELD_API ForEachObject(const FObjectVisitor& ObjectVisitor);

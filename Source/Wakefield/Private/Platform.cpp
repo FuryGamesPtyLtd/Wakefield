@@ -2,5 +2,5 @@
 
 void ExitFailure()
 {
-	FPlatformMisc::RequestExitWithStatus(false, EXIT_FAILURE);	
+	FPlatformMisc::RequestExitWithStatus(false, EXIT_FAILURE);
 }
