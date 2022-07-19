@@ -1,4 +1,4 @@
-// Copyright Fury Games Pty Ltd. All Rights Reserved.
+// Copyright Fury Games Pty Ltd. All rights reserved.
 
 #pragma once
 
