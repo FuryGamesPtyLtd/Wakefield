@@ -7,9 +7,6 @@ public class Wakefield : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bEnforceIWYU = true;
           
-        PrivateDependencyModuleNames.AddRange(new string[]{
-            "Core",
-            "CoreUObject"
-        });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine" });
     }
 }

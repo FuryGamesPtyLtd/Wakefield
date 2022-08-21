@@ -63,6 +63,10 @@ inline FString Enstring(uint64 i)
 {
 	return FString::Printf(TEXT("%llu"), i);
 }
+inline FString Enstring(const void* p)
+{
+	return Enstring(reinterpret_cast<uint64>(p));
+}
 inline FString Enstring(int8 i)
 {
 	return Enstring(int32(i));
