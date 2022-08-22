@@ -173,12 +173,15 @@ enum class EPalette : uint32
 	Cobalt_Blue = 0x0047AB UMETA(DisplayName = "Cobalt Blue"),
 	Coffee = 0x6F4E37 UMETA(DisplayName = "Coffee"),
 	Colorwheel_Blue_Green = 0x064E40 UMETA(DisplayName = "Colorwheel Blue Green"),
-	Colorwheel_Blue_Violet = 0x4D1A7F UMETA(DisplayName = "Colorwheel Blue Violet"),
+	Colorwheel_Blue_Violet =
+		0x4D1A7F UMETA(DisplayName = "Colorwheel Blue Violet"),
 	Colorwheel_Red_Orange = 0xFF4500 UMETA(DisplayName = "Colorwheel Red Orange"),
 	Colorwheel_Red_Violet = 0x922B3E UMETA(DisplayName = "Colorwheel Red Violet"),
 	Colorwheel_Violet = 0x7F00FF UMETA(DisplayName = "Colorwheel Violet"),
-	Colorwheel_Yellow_Green = 0x30B21A UMETA(DisplayName = "Colorwheel Yellow Green"),
-	Colorwheel_Yellow_Orange = 0xFF9505 UMETA(DisplayName = "Colorwheel Yellow Orange"),
+	Colorwheel_Yellow_Green =
+		0x30B21A UMETA(DisplayName = "Colorwheel Yellow Green"),
+	Colorwheel_Yellow_Orange =
+		0xFF9505 UMETA(DisplayName = "Colorwheel Yellow Orange"),
 	Columbia_Blue = 0xB9D9EB UMETA(DisplayName = "Columbia Blue"),
 	Computer_Dark_Green = 0x006400 UMETA(DisplayName = "Computer Dark Green"),
 	Computer_Gray = 0xBEBEBE UMETA(DisplayName = "Computer Gray"),
@@ -403,10 +406,14 @@ enum class EPalette : uint32
 	Indigo = 0x4B0082 UMETA(DisplayName = "Indigo"),
 	Indigo_Dye = 0x00416A UMETA(DisplayName = "Indigo Dye"),
 	Infrared = 0xFF496C UMETA(DisplayName = "Infrared"),
-	International_Klein_Blue = 0x130a8f UMETA(DisplayName = "International Klein Blue"),
-	International_Orange_Aerospace = 0xFF4F00 UMETA(DisplayName = "International Orange Aerospace"),
-	International_Orange_Engineering = 0xBA160C UMETA(DisplayName = "International Orange Engineering"),
-	International_Orange_Golden_Gate_Bridge = 0xC0362C UMETA(DisplayName = "International Orange Golden Gate Bridge"),
+	International_Klein_Blue =
+		0x130a8f UMETA(DisplayName = "International Klein Blue"),
+	International_Orange_Aerospace =
+		0xFF4F00 UMETA(DisplayName = "International Orange Aerospace"),
+	International_Orange_Engineering =
+		0xBA160C UMETA(DisplayName = "International Orange Engineering"),
+	International_Orange_Golden_Gate_Bridge =
+		0xC0362C UMETA(DisplayName = "International Orange Golden Gate Bridge"),
 	Iris = 0x5A4FCF UMETA(DisplayName = "Iris"),
 	Isabelline = 0xF4F0EC UMETA(DisplayName = "Isabelline"),
 	Ivory = 0xFFFFF0 UMETA(DisplayName = "Ivory"),
@@ -448,7 +455,8 @@ enum class EPalette : uint32
 	Light_Cornflower_Blue = 0x93CCEA UMETA(DisplayName = "Light Cornflower Blue"),
 	Light_Cyan = 0xE0FFFF UMETA(DisplayName = "Light Cyan"),
 	Light_French_Beige = 0xC8AD7F UMETA(DisplayName = "Light French Beige"),
-	Light_Goldenrod_Yellow = 0xFAFAD2 UMETA(DisplayName = "Light Goldenrod Yellow"),
+	Light_Goldenrod_Yellow =
+		0xFAFAD2 UMETA(DisplayName = "Light Goldenrod Yellow"),
 	Light_Gray = 0xD3D3D3 UMETA(DisplayName = "Light Gray"),
 	Light_Green = 0x90EE90 UMETA(DisplayName = "Light Green"),
 	Light_Orange = 0xFED8B1 UMETA(DisplayName = "Light Orange"),
@@ -505,7 +513,8 @@ enum class EPalette : uint32
 	Maya_Blue = 0x73C2FB UMETA(DisplayName = "Maya Blue"),
 	Medium_Aquamarine = 0x66DDAA UMETA(DisplayName = "Medium Aquamarine"),
 	Medium_Blue = 0x0000CD UMETA(DisplayName = "Medium Blue"),
-	Medium_Candy_Apple_Red = 0xE2062C UMETA(DisplayName = "Medium Candy Apple Red"),
+	Medium_Candy_Apple_Red =
+		0xE2062C UMETA(DisplayName = "Medium Candy Apple Red"),
 	Medium_Carmine = 0xAF4035 UMETA(DisplayName = "Medium Carmine"),
 	Medium_Orchid = 0xBA55D3 UMETA(DisplayName = "Medium Orchid"),
 	Medium_Purple = 0x9370DB UMETA(DisplayName = "Medium Purple"),
@@ -608,7 +617,8 @@ enum class EPalette : uint32
 	Peach_Puff = 0xFFDAB9 UMETA(DisplayName = "Peach Puff"),
 	Pear = 0xD1E231 UMETA(DisplayName = "Pear"),
 	Pearly_Purple = 0xB768A2 UMETA(DisplayName = "Pearly Purple"),
-	Permanent_Geranium_Lake = 0xE12C2C UMETA(DisplayName = "Permanent Geranium Lake"),
+	Permanent_Geranium_Lake =
+		0xE12C2C UMETA(DisplayName = "Permanent Geranium Lake"),
 	Persian_Blue = 0x1C39BB UMETA(DisplayName = "Persian Blue"),
 	Persian_Green = 0x00A693 UMETA(DisplayName = "Persian Green"),
 	Persian_Indigo = 0x32127A UMETA(DisplayName = "Persian Indigo"),
@@ -647,7 +657,8 @@ enum class EPalette : uint32
 	Pullman_Brown_Ups = 0x644117 UMETA(DisplayName = "Pullman Brown Ups"),
 	Pumpkin = 0xFF7518 UMETA(DisplayName = "Pumpkin"),
 	Purple = 0x6A0DAD UMETA(DisplayName = "Purple"),
-	Purple_Mountain_Majesty = 0x9678B6 UMETA(DisplayName = "Purple Mountain Majesty"),
+	Purple_Mountain_Majesty =
+		0x9678B6 UMETA(DisplayName = "Purple Mountain Majesty"),
 	Purple_Munsell = 0x9F00C5 UMETA(DisplayName = "Purple Munsell"),
 	Purple_Navy = 0x4E5180 UMETA(DisplayName = "Purple Navy"),
 	Purple_Pizzazz = 0xFE4EDA UMETA(DisplayName = "Purple Pizzazz"),
@@ -716,7 +727,8 @@ enum class EPalette : uint32
 	Russian_Violet = 0x32174D UMETA(DisplayName = "Russian Violet"),
 	Rust = 0xB7410E UMETA(DisplayName = "Rust"),
 	Rusty_Red = 0xDA2C43 UMETA(DisplayName = "Rusty Red"),
-	Sacramento_State_Green = 0x043927 UMETA(DisplayName = "Sacramento State Green"),
+	Sacramento_State_Green =
+		0x043927 UMETA(DisplayName = "Sacramento State Green"),
 	Saddle_Brown = 0x8B4513 UMETA(DisplayName = "Saddle Brown"),
 	Safety_Orange = 0xFF7800 UMETA(DisplayName = "Safety Orange"),
 	Safety_Orange_Blaze = 0xFF6700 UMETA(DisplayName = "Safety Orange Blaze"),
@@ -813,9 +825,11 @@ enum class EPalette : uint32
 	Timberwolf = 0xDBD7D2 UMETA(DisplayName = "Timberwolf"),
 	Titanium_Yellow = 0xEEE600 UMETA(DisplayName = "Titanium Yellow"),
 	Tomato = 0xFF6347 UMETA(DisplayName = "Tomato"),
-	Traditional_Chartreuse = 0xDFFF00 UMETA(DisplayName = "Traditional Chartreuse"),
+	Traditional_Chartreuse =
+		0xDFFF00 UMETA(DisplayName = "Traditional Chartreuse"),
 	Traditional_Chocolate = 0x7B3F00 UMETA(DisplayName = "Traditional Chocolate"),
-	Traditional_Forest_Green = 0x014421 UMETA(DisplayName = "Traditional Forest Green"),
+	Traditional_Forest_Green =
+		0x014421 UMETA(DisplayName = "Traditional Forest Green"),
 	Tropical_Rainforest = 0x00755E UMETA(DisplayName = "Tropical Rainforest"),
 	True_Blue = 0x2D68C4 UMETA(DisplayName = "True Blue"),
 	Trypan_Blue = 0x1C05B3 UMETA(DisplayName = "Trypan Blue"),
@@ -837,7 +851,8 @@ enum class EPalette : uint32
 	Umber = 0x635147 UMETA(DisplayName = "Umber"),
 	Unbleached_Silk = 0xFFDDCA UMETA(DisplayName = "Unbleached Silk"),
 	United_Nations_Blue = 0x5B92E5 UMETA(DisplayName = "United Nations Blue"),
-	University_Of_Pennsylvania_Red = 0xA50021 UMETA(DisplayName = "University Of Pennsylvania Red"),
+	University_Of_Pennsylvania_Red =
+		0xA50021 UMETA(DisplayName = "University Of Pennsylvania Red"),
 	Up_Maroon = 0x7B1113 UMETA(DisplayName = "Up Maroon"),
 	Upsdell_Red = 0xAE2029 UMETA(DisplayName = "Upsdell Red"),
 	Uranian_Blue = 0xAFDBF5 UMETA(DisplayName = "Uranian Blue"),
@@ -907,8 +922,6 @@ FORCEINLINE FLinearColor ToLinearColor(EPalette Palette)
 {
 	static_assert(sizeof(Palette) == sizeof(uint32));
 	uint32 Bytes = static_cast<uint32>(Palette);
-	return FLinearColor(FColor(
-		(Bytes >> 16) & 0xFF,
-		(Bytes >> 8) & 0xFF,
-		(Bytes >> 0) & 0xFF));
+	return FLinearColor(
+		FColor((Bytes >> 16) & 0xFF, (Bytes >> 8) & 0xFF, (Bytes >> 0) & 0xFF));
 }

@@ -4,8 +4,8 @@
 
 #include "Wakefield/Enstring.h"
 
-// Print(a1,a2,...,an) will convert its arguments to strings concatenate them with a space separator and UE_LOG them at
-// Display level.
+// Print(a1,a2,...,an) will convert its arguments to strings concatenate them
+// with a space separator and UE_LOG them at Display level.
 //
 // eg
 //
@@ -19,7 +19,8 @@ void Print(Arg0&& arg0);
 template <typename Arg0, typename... Args>
 void Print(Arg0&& arg0, Args&&... args);
 
-// WKF_PRINT_EXPR(expr) will stringize its argument expression and its argument value and then Print("expr = value")
+// WKF_PRINT_EXPR(expr) will stringize its argument expression and its argument
+// value and then Print("expr = value")
 //
 // eg
 //

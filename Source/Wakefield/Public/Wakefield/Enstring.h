@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include <string>
 #include "Containers/UnrealString.h"
+#include <string>
 
 // ToStd(s) Converts an FString s to a UTF-8 std::string
 inline std::string ToStd(const FString& String)
@@ -17,7 +17,8 @@ inline FString FromStd(const std::string& String)
 	return UTF8_TO_TCHAR(String.c_str());
 }
 
-// Enstring(a1,a2,...,an) will convert its arguments to strings, concatenate them, and return them as an FString.
+// Enstring(a1,a2,...,an) will convert its arguments to strings, concatenate
+// them, and return them as an FString.
 //
 // eg
 //    Enstring(42) returns FString("42")

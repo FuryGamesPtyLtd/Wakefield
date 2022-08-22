@@ -50,14 +50,14 @@ struct WAKEFIELD_API FActorSpawnSpecification : FActorSpawnParameters
 // (This means that Initialize is called prior to replication of the actor,
 // and so COND_Initial properties can be set by Initialize.)
 //
-template< class T, typename... TArgs>
-T* SpawnActor( UWorld* World, FActorSpawnSpecification ActorSpawnSpecification, TArgs&&... Args)
+template <class T, typename... TArgs>
+T* SpawnActor(UWorld* World, FActorSpawnSpecification ActorSpawnSpecification,
+	TArgs&&... Args)
 {
 	ActorSpawnSpecification.bDeferConstruction = true;
 	if (ActorSpawnSpecification.Class == nullptr)
 		ActorSpawnSpecification.Class = T::StaticClass();
-	AActor* BaseActor =	World->SpawnActor(
-		ActorSpawnSpecification.Class,
+	AActor* BaseActor = World->SpawnActor(ActorSpawnSpecification.Class,
 		&ActorSpawnSpecification.Transform,
 		ActorSpawnSpecification);
 	T* Actor = CastChecked<T>(BaseActor);

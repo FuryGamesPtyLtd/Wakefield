@@ -3,14 +3,16 @@
 #include "Wakefield/ForEachObject.h"
 
 #include "UObject/GarbageCollection.h"
+#include "UObject/Object.h"
 #include "UObject/UObjectArray.h"
 #include "UObject/UObjectBase.h"
-#include "UObject/Object.h"
 
 void ForEachObject(const FObjectVisitor& ObjectVisitor)
 {
 	FGCScopeGuard Guard;
-	for (FUObjectArray::TIterator Iterator(GUObjectArray); Iterator != FUObjectArray::TIterator(FUObjectArray::TIterator::EndTag, Iterator); ++Iterator)
+	for (FUObjectArray::TIterator Iterator(GUObjectArray);
+		 Iterator != FUObjectArray::TIterator(FUObjectArray::TIterator::EndTag, Iterator);
+		 ++Iterator)
 	{
 		FUObjectItem* ObjectItem = GUObjectArray.IndexToObject(Iterator.GetIndex());
 		check(ObjectItem);

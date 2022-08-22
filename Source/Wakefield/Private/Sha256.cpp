@@ -27,8 +27,7 @@ namespace
 		{
 			if (i < 16)
 			{
-				w[j] =
-					((uint32)buffer[0] << 24) | ((uint32)buffer[1] << 16) | ((uint32)buffer[2] << 8) | ((uint32)buffer[3]);
+				w[j] = ((uint32)buffer[0] << 24) | ((uint32)buffer[1] << 16) | ((uint32)buffer[2] << 8) | ((uint32)buffer[3]);
 				buffer += 4;
 			}
 			else
