@@ -7,6 +7,8 @@ public class Wakefield : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bEnforceIWYU = true;
           
+
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine" });
+        AddEngineThirdPartyPrivateStaticDependencies(Target, "OpenSSL");
     }
 }

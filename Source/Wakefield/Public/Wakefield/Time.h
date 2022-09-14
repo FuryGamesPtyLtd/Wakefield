@@ -10,8 +10,8 @@
 // #include <sstream>
 // #include <string>
 
-using FWkfDuration = std::chrono::duration<int64_t, std::nano>;
-using FWkfTimePoint = std::chrono::time_point<std::chrono::system_clock, FWkfDuration>;
+using FWfDuration = std::chrono::duration<int64_t, std::nano>;
+using FWfTimePoint = std::chrono::time_point<std::chrono::system_clock, FWfDuration>;
 
 // namespace std::chrono {
 // 	inline std::ostream& operator<<(std::ostream& o, FDuration duration) {
@@ -19,7 +19,7 @@ using FWkfTimePoint = std::chrono::time_point<std::chrono::system_clock, FWkfDur
 // 	}
 // }  // namespace std::chrono
 
-inline double ToSeconds(FWkfDuration duration) {
+inline double ToSeconds(FWfDuration duration) {
 	return static_cast<double>(duration.count()) / 1.0e9;
 }
 
@@ -47,7 +47,7 @@ inline double ToSeconds(FWkfDuration duration) {
 // 	return s2;
 // }
 
-inline FWkfTimePoint Now() {
-	return std::chrono::time_point_cast<FWkfDuration>(
+inline FWfTimePoint Now() {
+	return std::chrono::time_point_cast<FWfDuration>(
 		std::chrono::system_clock::now());
 }

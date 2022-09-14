@@ -1,4 +1,4 @@
-// Copyright Fury Games Pty Ltd. All rights reserved.
+﻿// Copyright Fury Games Pty Ltd. All rights reserved.
 
 #include "Wakefield/Sha256.h"
 
@@ -41,7 +41,7 @@ namespace
 		}
 	}
 
-	FORCEINLINE void sha256_block(FSha256* sha)
+	FORCEINLINE void sha256_block(FWfSha256BuilderHandmade* sha)
 	{
 		uint32_t* state = sha->State;
 
@@ -156,7 +156,7 @@ namespace
 		state[7] += h;
 	}
 
-	FORCEINLINE void sha256_append_byte(FSha256* sha, uint8 byte)
+	FORCEINLINE void sha256_append_byte(FWfSha256BuilderHandmade* sha, uint8 byte)
 	{
 		sha->Buffer[sha->BufferCounter++] = byte;
 		sha->NBits += 8;
@@ -168,7 +168,7 @@ namespace
 		}
 	}
 
-	FORCEINLINE void sha256_finalize(FSha256* sha)
+	FORCEINLINE void sha256_finalize(FWfSha256BuilderHandmade* sha)
 	{
 		int i;
 		uint64 n_bits = sha->NBits;
@@ -189,7 +189,7 @@ namespace
 
 } // namespace
 
-FSha256::FSha256()
+FWfSha256BuilderHandmade::FWfSha256BuilderHandmade()
 {
 	for (int i = 0; i < 64; i++)
 		Buffer[i] = 0;
@@ -205,7 +205,7 @@ FSha256::FSha256()
 	BufferCounter = 0;
 }
 
-void FSha256::Append(const void* data, size_t n_bytes)
+void FWfSha256BuilderHandmade::Append(const void* data, size_t n_bytes)
 {
 	const uint8* bytes = (const uint8*)data;
 
@@ -215,10 +215,10 @@ void FSha256::Append(const void* data, size_t n_bytes)
 	}
 }
 
-std::array<uint64, 4> FSha256::Finalize()
+FWfSha256 FWfSha256BuilderHandmade::Finalize()
 {
-	std::array<uint64, 4> Result;
-	uint8_t* ptr = (uint8_t*)Result.data();
+	FWfSha256 Result;
+	uint8_t* ptr = Result.Bytes;
 	int i, j;
 	sha256_finalize(this);
 
