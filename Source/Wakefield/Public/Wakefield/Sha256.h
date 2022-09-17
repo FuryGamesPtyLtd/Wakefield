@@ -2,12 +2,12 @@
 
 #pragma once
 
-#include <openssl/sha.h>
-
 #include "CoreMinimal.h"
 #include "Sha256.Generated.h"
 
 #define WKF_SHA256_BYTES_SIZE 32
+#define WKF_SHA256_OPENSSL_CTX_LEN 112
+#define WKF_SHA256_OPENSSL_CTX_ALIGN 4
 
 USTRUCT()
 struct FWfSha256
@@ -63,23 +63,12 @@ public:
 class WAKEFIELD_API FWfSha256BuilderOpenSSL
 {
 public:
-	FORCEINLINE FWfSha256BuilderOpenSSL()
-	{
-		SHA256_Init(&Context);
-	}
+	FWfSha256BuilderOpenSSL();
 	
-	FORCEINLINE void Append(const void* data, size_t n_bytes)
-	{
-		SHA256_Update(&Context, data, n_bytes);
-	}
+	void Append(const void* data, size_t n_bytes);
+	FWfSha256 Finalize();
 
-	FORCEINLINE FWfSha256 Finalize()
-	{
-		FWfSha256 Result;
-		SHA256_Final(Result.Bytes, &Context);
-		return Result;
-	}
-
+	using ContextStorage = std::aligned_storage_t<WKF_SHA256_OPENSSL_CTX_LEN, WKF_SHA256_OPENSSL_CTX_ALIGN>; 
 private:
-	SHA256_CTX Context;
+	ContextStorage Context;
 };
