@@ -9,7 +9,7 @@ FWfSha256BuilderOpenSSL::FWfSha256BuilderOpenSSL()
 {
 	SHA256_Init((SHA256_CTX*)&Context);
 }
-	
+
 void FWfSha256BuilderOpenSSL::Append(const void* data, size_t n_bytes)
 {
 	SHA256_Update((SHA256_CTX*)&Context, data, n_bytes);

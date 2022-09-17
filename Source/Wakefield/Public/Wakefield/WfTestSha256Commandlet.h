@@ -7,7 +7,7 @@
 #include "WfTestSha256Commandlet.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class WAKEFIELD_API UWfTestSha256Commandlet : public UCommandlet

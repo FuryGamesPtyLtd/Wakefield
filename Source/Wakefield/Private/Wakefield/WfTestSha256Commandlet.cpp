@@ -10,7 +10,6 @@ namespace
 	class ShaTester
 	{
 	public:
-
 		void Append(const char* str)
 		{
 			BuilderHandmade.Append(str, strlen(str));
@@ -28,12 +27,12 @@ namespace
 			FString Expected = Enstring(str);
 			check(0 == Observed.Compare(Expected, ESearchCase::IgnoreCase));
 		}
-		
+
 	private:
 		FWfSha256BuilderHandmade BuilderHandmade;
 		FWfSha256BuilderOpenSSL BuilderOpenSSL;
 	};
-}
+} // namespace
 
 int32 UWfTestSha256Commandlet::Main(const FString& Params)
 {
@@ -64,7 +63,7 @@ int32 UWfTestSha256Commandlet::Main(const FString& Params)
 	{
 		ShaTester Tester;
 		for (int i = 0; i < 16777216; i++)
-			Tester.Append( "abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno");
+			Tester.Append("abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno");
 		Tester.Test("50e72a0e26442fe2552dc3938ac58658228c0cbfb1d2ca872ae435266fcd055e");
 	}
 

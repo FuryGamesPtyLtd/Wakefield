@@ -19,7 +19,8 @@ using FWfTimePoint = std::chrono::time_point<std::chrono::system_clock, FWfDurat
 // 	}
 // }  // namespace std::chrono
 
-inline double ToSeconds(FWfDuration duration) {
+inline double ToSeconds(FWfDuration duration)
+{
 	return static_cast<double>(duration.count()) / 1.0e9;
 }
 
@@ -47,7 +48,8 @@ inline double ToSeconds(FWfDuration duration) {
 // 	return s2;
 // }
 
-inline FWfTimePoint Now() {
+inline FWfTimePoint Now()
+{
 	return std::chrono::time_point_cast<FWfDuration>(
 		std::chrono::system_clock::now());
 }
