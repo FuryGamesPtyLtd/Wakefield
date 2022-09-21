@@ -217,7 +217,13 @@ void FWfSha256BuilderHandmade::Append(const void* data, size_t n_bytes)
 
 FWfSha256 FWfSha256BuilderHandmade::Finalize()
 {
-	FWfSha256 Result;
+	FWfSha256 Result(NoInit);
+	Finalize(Result);
+	return Result;
+}
+
+void FWfSha256BuilderHandmade::Finalize(FWfSha256& Result)
+{
 	uint8_t* ptr = Result.Bytes;
 	int i, j;
 	sha256_finalize(this);
@@ -229,5 +235,4 @@ FWfSha256 FWfSha256BuilderHandmade::Finalize()
 			*ptr++ = (State[i] >> j * 8) & 0xff;
 		}
 	}
-	return Result;
 }

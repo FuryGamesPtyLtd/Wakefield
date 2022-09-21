@@ -3,19 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Sha256.Generated.h"
 
 #define WKF_SHA256_BYTES_SIZE 32
 #define WKF_SHA256_OPENSSL_CTX_LEN 112
 #define WKF_SHA256_OPENSSL_CTX_ALIGN 4
 
-USTRUCT()
 struct FWfSha256
 {
-	GENERATED_BODY()
-
-	UPROPERTY()
-	uint8 Bytes[WKF_SHA256_BYTES_SIZE] = {};
+	FWfSha256() : Bytes{} {}
+	FWfSha256(ENoInit) {}
+	
+	uint8 Bytes[WKF_SHA256_BYTES_SIZE];
 
 	FORCEINLINE FString ToString() const
 	{
@@ -53,6 +51,7 @@ public:
 	void Append(const void* data, size_t n_bytes);
 
 	FWfSha256 Finalize();
+	void Finalize(FWfSha256& Result);
 
 	uint32_t State[8];
 	uint8_t Buffer[64];
@@ -67,6 +66,7 @@ public:
 
 	void Append(const void* data, size_t n_bytes);
 	FWfSha256 Finalize();
+	void Finalize(FWfSha256& Result);
 
 	using ContextStorage = std::aligned_storage_t<WKF_SHA256_OPENSSL_CTX_LEN, WKF_SHA256_OPENSSL_CTX_ALIGN>;
 

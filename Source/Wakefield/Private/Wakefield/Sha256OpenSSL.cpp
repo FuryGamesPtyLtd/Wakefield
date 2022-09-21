@@ -15,9 +15,14 @@ void FWfSha256BuilderOpenSSL::Append(const void* data, size_t n_bytes)
 	SHA256_Update((SHA256_CTX*)&Context, data, n_bytes);
 }
 
+void FWfSha256BuilderOpenSSL::Finalize(FWfSha256& Result)
+{
+	SHA256_Final(Result.Bytes, (SHA256_CTX*)&Context);
+}
+
 FWfSha256 FWfSha256BuilderOpenSSL::Finalize()
 {
-	FWfSha256 Result;
-	SHA256_Final(Result.Bytes, (SHA256_CTX*)&Context);
+	FWfSha256 Result(NoInit);
+	Finalize(Result);
 	return Result;
 }
