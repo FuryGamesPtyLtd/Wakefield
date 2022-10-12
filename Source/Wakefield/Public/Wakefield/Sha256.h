@@ -10,9 +10,10 @@
 
 struct FWfSha256
 {
-	FWfSha256() : Bytes{} {}
+	FWfSha256()
+		: Bytes{} {}
 	FWfSha256(ENoInit) {}
-	
+
 	uint8 Bytes[WKF_SHA256_BYTES_SIZE];
 
 	FORCEINLINE FString ToString() const
