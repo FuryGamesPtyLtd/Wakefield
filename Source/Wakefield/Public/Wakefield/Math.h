@@ -24,19 +24,19 @@ constexpr FORCEINLINE int64 SignedMod(int64 A, int64 B)
 constexpr double operator"" _m(unsigned long long int M)
 {
 	return M * 100.0;
-} 
+}
 
 constexpr double operator"" _m(long double M)
 {
 	return M * 100.0;
-} 
+}
 
 constexpr double operator"" _km(unsigned long long int Km)
 {
 	return Km * 100000.0;
-} 
+}
 
 constexpr double operator"" _km(long double Km)
 {
 	return Km * 100000.0;
-} 
+}
