@@ -69,7 +69,6 @@ public:
 	}
 
 private:
-	
 	static double NormalizeYaw(double Yaw)
 	{
 		Yaw -= 360 * std::floor(Yaw / 360.0);

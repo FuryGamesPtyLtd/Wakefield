@@ -3,7 +3,7 @@
 FVector2D NearestPointOnLineSegment(FVector2D Point, FVector2D LineA, FVector2D LineB)
 {
 	const FVector2D LineOffset = LineB - LineA;
-	const double LineLength = LineOffset.Length(); 
+	const double LineLength = LineOffset.Length();
 	if (LineLength < KINDA_SMALL_NUMBER)
 		return LineA;
 	const FVector2D LineDirection = LineOffset.GetSafeNormal();
