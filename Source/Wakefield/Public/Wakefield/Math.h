@@ -55,6 +55,28 @@ public:
 		Yaw = NormalizeYaw(YawIn);
 	}
 
+	FYawAngle operator+(double Delta) const
+	{
+		return FYawAngle(Yaw + Delta);
+	}
+
+	FYawAngle& operator+=(double Delta)
+	{
+		Yaw = NormalizeYaw(Yaw + Delta);
+		return *this;
+	}
+
+	FYawAngle operator-(double Delta) const
+	{
+		return FYawAngle(Yaw - Delta);
+	}
+
+	FYawAngle& operator-=(double Delta)
+	{
+		Yaw = NormalizeYaw(Yaw - Delta);
+		return *this;
+	}
+
 	double Get() const { return Yaw; }
 
 	static double GetDelta(FYawAngle Source, FYawAngle Destination)
