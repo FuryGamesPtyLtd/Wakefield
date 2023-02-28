@@ -77,9 +77,14 @@ public:
 		return *this;
 	}
 
+	double Dot(const FYawAngle That) const
+	{
+		return Sincos().Dot(That.Sincos());
+	}
+
 	double Get() const { return Yaw; }
 
-	static double GetDelta(FYawAngle Source, FYawAngle Destination)
+	static double GetDelta(const FYawAngle Source, const FYawAngle Destination)
 	{
 		const double A = Source.Yaw;
 		const double B = Destination.Yaw;
