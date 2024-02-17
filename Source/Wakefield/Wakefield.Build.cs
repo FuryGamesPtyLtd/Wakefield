@@ -5,9 +5,7 @@ public class Wakefield : ModuleRules
     public Wakefield(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-        bEnforceIWYU = true;
-          
-
+        IWYUSupport = IWYUSupport.Full;
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine" });
         AddEngineThirdPartyPrivateStaticDependencies(Target, "OpenSSL");
     }
