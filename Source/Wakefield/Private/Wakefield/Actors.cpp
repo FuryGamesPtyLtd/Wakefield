@@ -2,8 +2,7 @@
 
 #include "Wakefield/Actors.h"
 
-FActorSpawnSpecification::FActorSpawnSpecification(UClass* ClassIn,
-	FTransform TransformIn)
+FActorSpawnSpecification::FActorSpawnSpecification(UClass* ClassIn, FTransform TransformIn)
 	: FActorSpawnParameters(), Class(ClassIn), Transform(TransformIn) {}
 
 FActorSpawnSpecification::FActorSpawnSpecification()

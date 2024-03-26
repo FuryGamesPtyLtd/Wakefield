@@ -47,9 +47,8 @@ public:
 	explicit FYawAngle(FVector2D UnitVector)
 		: FYawAngle(FMath::RadiansToDegrees(FMath::Atan2(UnitVector.Y, UnitVector.X)))
 	{
-
 	}
-	
+
 	explicit FYawAngle(double YawIn)
 	{
 		Yaw = NormalizeYaw(YawIn);
