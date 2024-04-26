@@ -5,33 +5,32 @@
 #include "Wakefield/Print.h"
 #include "Wakefield/Sha256.h"
 
-namespace
+namespace {
+class ShaTester
 {
-	class ShaTester
+public:
+	void Append(const char* str)
 	{
-	public:
-		void Append(const char* str)
-		{
-			BuilderHandmade.Append(str, strlen(str));
-			BuilderOpenSSL.Append(str, strlen(str));
-		}
+		BuilderHandmade.Append(str, strlen(str));
+		BuilderOpenSSL.Append(str, strlen(str));
+	}
 
-		void Test(const char* str)
-		{
-			check(strlen(str) == 64);
-			FWfSha256 Sha1, Sha2;
-			Sha1 = BuilderHandmade.Finalize();
-			Sha2 = BuilderOpenSSL.Finalize();
-			check(Sha1 == Sha2);
-			FString Observed = Sha1.ToString();
-			FString Expected = Enstring(str);
-			check(0 == Observed.Compare(Expected, ESearchCase::IgnoreCase));
-		}
+	void Test(const char* str)
+	{
+		check(strlen(str) == 64);
+		FWfSha256 Sha1, Sha2;
+		Sha1 = BuilderHandmade.Finalize();
+		Sha2 = BuilderOpenSSL.Finalize();
+		check(Sha1 == Sha2);
+		FString Observed = Sha1.ToString();
+		FString Expected = Enstring(str);
+		check(0 == Observed.Compare(Expected, ESearchCase::IgnoreCase));
+	}
 
-	private:
-		FWfSha256BuilderHandmade BuilderHandmade;
-		FWfSha256BuilderOpenSSL BuilderOpenSSL;
-	};
+private:
+	FWfSha256BuilderHandmade BuilderHandmade;
+	FWfSha256BuilderOpenSSL BuilderOpenSSL;
+};
 } // namespace
 
 int32 UWfTestSha256Commandlet::Main(const FString& Params)
